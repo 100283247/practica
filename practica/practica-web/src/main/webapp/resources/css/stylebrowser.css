@@ -1,0 +1,71 @@
+
+.mes{
+font-family:'DosisRegular';
+font-size:19px;
+}
+
+.mesdiv{
+float:left;
+}
+
+.mes li.title{
+font-weight:bold;
+font-size:22px;
+}
+
+.mes a{
+margin-left:20px;
+font-style:normal;
+text-decoration:none;
+color:#a7a7a7;
+cursor: pointer;
+}
+
+.mes a:hover{
+font-weight:bold;
+color:#a89574;
+margin-left:18px;
+}
+
+.courses{
+float:left;
+}
+.list-courses{
+padding:10px;
+
+}
+.list-courses-contain{
+padding:10px;
+margin:10px;
+font-family:'SintonyRegular';
+max-width:700px;
+min-height:85px;
+background-color:#F3F2F2;
+border:solid;
+border-color:#EDECEC;
+cursor: pointer;
+}
+.list-courses-contain:hover{
+background:white;
+/**
+border-color:#a89574;
+border-width:1px;
+**/
+}
+
+.list-courses-contain img{
+max-width:60px;
+max-height:60px;
+float:left;	
+}
+.list-courses-contain div{
+float:left;	
+padding:6px;
+margin-left:20px;
+
+}
+
+.list-courses-contain p{
+margin-left:10px;
+font-style:italic;
+}

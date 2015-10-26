@@ -1,0 +1,8 @@
+
+.mes{
+font-family:'DosisRegular';
+}
+
+.mes li.title{
+font-weight:bold;
+}

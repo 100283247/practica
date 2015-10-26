@@ -1,0 +1,45 @@
+#saven{
+max-width:20px;
+}
+#savea{
+max-width:20px;
+}
+#savee{
+max-width:20px;
+}
+#save1{
+max-width:20px;
+}
+.boxperfil{
+width:940px;
+height:1100px;
+}
+.boton{
+position:absolute;
+width:150px;
+right:100px;
+}
+.boton2{
+position:absolute;
+width:150px;
+right:100px;
+}
+.infoperfil{
+margin-top:70px;
+}
+.thumb {
+            height: 200px;
+			width: 200px;
+            border: 1px solid #000;
+            margin: 10px 5px 0 0;
+          }
+.fotperf{
+height: 300px;
+}
+.primerafot{
+height: 200px;
+width: 200px;
+margin: 10px 5px 0 0;
+border: 1px solid #000;
+position:absolute;
+}
