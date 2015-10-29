@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" session="true"%>
+    <%@page import="es.uc3m.tiw.web.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -53,6 +54,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						});
 					});
 				   </script>
+<%
+	Usuario usuario = (Usuario) session.getAttribute("Usuario");
+		BaseDatos bbdd = BaseDatos.getInstance();
+		CursoDAO cursoDao = new CursoDAO ();
+		Cursos curso = new Cursos();
+		
+		for(int i = 0; i<4;i++){
+			
+		curso.setIdprofesor("e.garciacentenera"+i+"@gmail.es");
+		curso.setNombreCurso("Historia de arte contemporaneo");
+		
+		cursoDao.crearCurso(curso);
+		}
+%>				   
+				   
 </head>
 <body>
 <!-- //end-smoth-scrolling -->
@@ -85,8 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			 <div class="top-nav2">
 				<div class="top-nav">
 				<ul class="res">
-					<li><a  href="login.jsp"><span  data-hover="SingUp">SingUp </span> </a></li>
-					<li><a  href="login.jsp"><span  data-hover="SingIn"> SingIn</span> </a></li>
+					<li><a href ="perfilusuario.jsp">  <%=usuario.getNombre() %> </a></li>
 				</ul>
 				</div>
 			</div>
@@ -104,9 +119,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<hr>
 					<button class="boton2" id="saveprofile" >Guardar</button>
 					<button class="boton" id="edit" >Editar Perfil</button>
+					<a class="boton3" href = "altacurso.jsp" > Crear Curso</a>
 					<div class="perfil">
 						<div style="display:none" class="profilevisible">
-							<p style="margin:1px;">InformaciÃ³n de perfil:</p>
+							<p style="margin:1px;">InformaciÃƒÂ³n de perfil:</p>
 						</div>
 						<div class="boxperfil">
 							<div class="infoperfil">
@@ -116,26 +132,44 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<output id="list" style="margin-left:475px"></output>
 									<img style="margin-left:475px" class="primerafot" id="primerafot" src="resources/images/descarga.jpg">
 								</div>
-								<p id="name">- Nombre</p>
+								<p id="name">- Nombre: <%=usuario.getNombre() %> </p>
 								<input style="display:none" class="editperfil" type="text" id="nombre" placeholder="Introduce un nombre">
 								<input style="display:none" type="image" id="saven" class="tic" alt="image" src="resources/images/save.png">
-								<p id="desc1">- DescripciÃ³n</p>
-								<input style="display:none" class="editperfil" type="text"  id="desc" placeholder="Introduce una descripciÃ³n">
+								<p id="desc1">- DescripciÃƒÂ³n</p>
+								<input style="display:none" class="editperfil" type="text"  id="desc" placeholder="Introduce una descripciÃƒÂ³n">
 								<input style="display:none" type="image" id="savea" alt="image" class="tic" src="resources/images/save.png">
 								<p id="inter1">- Intereses</p>
 								<input style="display:none" class="editperfil" type="text"  id="inter" placeholder="Separados por comas">
 								<input style="display:none" type="image" id="savee" class="tic" alt="image" src="resources/images/save.png">
-								<p>- Cursos en los que estÃ¡s matriculado</p>
+								
+									<p>- Cursos que estÃƒÂ¡s impartiendo</p>
+								<ul style="list-style-type:circle">
+								<%
+								int j = 0;
+								for (int i =0; i<bbdd.getCursos().size();i++){
+									if (bbdd.getCursos().get(i).getIdprofesor().equals(usuario.getEmail())){
+										Cursos pedro= bbdd.getCursos().get(i);
+										j++;
+								%>
+								 <li style="font-style:italic; margin-left: 70px"><%=pedro.getNombreCurso() %><p><%=pedro.getIdprofesor() %></p></li>
+								<%
+									}
+								}
+								if(j==0){
+									%>
+									<li>no courses available</li>
+									<%	
+								}
+								
+								%>
+								</ul> 
+								<p>- Cursos en los que estÃƒÂ¡s matriculado</p>
 								<ul style="list-style-type:circle">
 								  <li style="font-style:italic; margin-left: 70px">Desarrollo de Aplicaciones iOS</li>
-								  <li style="font-style:italic; margin-left: 70px">La SoluciÃ³n del Conflicto Ãtico</li>
-								  <li style="font-style:italic; margin-left: 70px">Â¿QuÃ© hacen los buenos directivos? Prioridades de la Alta DirecciÃ³n</li>
+								  <li style="font-style:italic; margin-left: 70px">La SoluciÃƒÂ³n del Conflicto ÃƒÂ‰tico</li>
+								  <li style="font-style:italic; margin-left: 70px">Ã‚Â¿QuÃƒÂ© hacen los buenos directivos? Prioridades de la Alta DirecciÃƒÂ³n</li>
 								</ul>  
-								<p>- Cursos que estÃ¡s impartiendo</p>
-								<ul style="list-style-type:circle">
-								  <li style="font-style:italic; margin-left: 70px">Sistemas embebidos: Aplicaciones con Arduino</li>
-								  <li style="font-style:italic; margin-left: 70px">Tesoros de la fÃ­sica y sus descubridores</li>
-								</ul>  
+							 
 								<p>- Logros</p>
 								<ul style="list-style-type:circle">
 								  <li style="font-style:italic; margin-left: 70px">logro 1</li>
@@ -180,7 +214,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="#" class="gmail"> </a></li>
 						<li><a href="#" class="print"> </a></li>
 					</ul>
-				<p class="footer-copyrts">Â© 2015 Online School . Design  by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+				<p class="footer-copyrts">Ã‚Â© 2015 Online School . Design  by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
 		</div>
 	  <div class="clearfix"> </div>
 		</div>

@@ -81,4 +81,24 @@ public class BaseDatos {
 	}
 
 
+	public static BaseDatos getINSTANCE() {
+		return INSTANCE;
+	}
+
+
+	public static void setINSTANCE(BaseDatos iNSTANCE) {
+		INSTANCE = iNSTANCE;
+	}
+
+
+	public void setUsuarios(List<Usuario> usuarios) {
+		this.usuarios = usuarios;
+	}
+
+
+	public void setCursos(List<Cursos> cursos) {
+		this.cursos = cursos;
+	}
+
+
 }

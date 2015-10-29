@@ -6,6 +6,7 @@ public class Cursos {
 	private String id;
 	private String temario;
 	private String profesor;
+	private String idprofesor;
 	private String certificado;
 	private String secciones;
 	private String lecciones;
@@ -94,6 +95,8 @@ public class Cursos {
 
 	public void setId(String id) {
 		this.id = id;
+		
+		
 	}
 
 
@@ -210,44 +213,66 @@ public class Cursos {
 	protected boolean validarNombreCurso (){
 		// matches("^.*\\d.*$"), comprobamos que el nombre no contiene digitos.
 		if(nombreCurso.length()!=0 && !nombreCurso.matches("^.*\\d.*$")
-				&& nombreCurso!=null){
-			nombreCurso="";
+				&& nombreCurso!=null){;
 			return true;
-		}
-			nombreCurso = "";
+		};
 			return false;
 	}
 	
 	protected boolean validarPrecioCurso (){
-		if(precio.length()!=0&& Double.parseDouble(precio)>0 
-			//matches("[0.0-9.0]*"), comprobamos que el precio esta compuesto por los dígitos entre 0-9
-		   &&precio!=null && precio.matches("[0.0-9.0]*")){
-			return true;
-		}
-			precio = "";
-			return false;
-	}
-	
-	protected boolean validarImagen (){
-		//comprobamos la extensión de la imagen que introduzca.
-		if(imagen.matches("[^\\s]+(\\.(?i)(jpg))$)")){
-			return true;
-		}
-			imagen = "";
-			return false;
+	int contador = 0;
 		
+		if(precio.length()!=0){
+			for(int i=0; i<precio.length();i++){
+					if((int)precio.charAt(i)>=48 && (int)precio.charAt(i)<=57){
+						contador++;
+					}
+			}
+		
+			if (contador==0){
+				return true;	
+			}
+		}
+		return false;
 	}
 	
-	protected boolean validarHorasDedicacion (){
-		//comprobamos que las horas de dedicación que ha introducido son correctas.
-		if(horasDedicacion.length()!=0&& Double.parseDouble(horasDedicacion)>0 
-			//matches("[0.0-9.0]*"), comprobamos que el precio esta compuesto por los dígitos entre 0-9
-		   &&horasDedicacion!=null && horasDedicacion.matches("[0.0-9.0]*")){
+	
+/*	protected boolean validarImagen (){
+		//comprobamos la extensión de la imagen que introduzca.
+		if(imagen.matches("[^\\s]+(\\.(?i)(jpg))$)")||imagen.matches(null)){
 			return true;
-		}
-			horasDedicacion = "";
-			return false;
+		}		
+			return false;	
 	}
+	*/
+	protected boolean validarHorasDedicacion(){		
+		int contador = 0;
+		
+		if(horasDedicacion.length()!=0){
+			for(int i=0; i<horasDedicacion.length();i++){
+					if((int)horasDedicacion.charAt(i)>=48 && (int)horasDedicacion.charAt(i)<=57){
+						contador++;
+					}
+			}	
+			if (contador==0){
+				return true;	
+			}
+		}
+		return false;
+	}
+
+
+	public String getIdprofesor() {
+		return idprofesor;
+	}
+
+
+	public void setIdprofesor(String idprofesor) {
+		this.idprofesor = idprofesor;
+	}
+
+
+
 
 	
 	

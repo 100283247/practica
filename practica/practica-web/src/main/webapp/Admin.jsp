@@ -182,18 +182,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <li class="tittle"><span class="logo-clr">ID</span>
                 <span class="logo-clr" style="margin-left:99px">Cursos</span>
                 <span class="logo-clr" style="margin-left:99px">Profesor</span>
-                <span class="logo-clr" style="margin-left:99px">Validación</span>
+                <span class="logo-clr" style="margin-left:99px">ValidaciÃ³n</span>
          </li>
             <li>
                 <span class= "izquierda" style="width: 200px" >1</span>
-                <span class= "izquierda" style=" width: 200px">Negociación</span>
+                <span class= "izquierda" style=" width: 200px">NegociaciÃ³n</span>
                 <span  class= "izquierda" style="width: 200px">Alberto Rodriguez</span>
                 <span  class= "izquierda" style="width: 220px"><button type="button" class="btn btn-success">Validar</button><button type="button" class="btn btn-danger" style="margin-left:5px">Denegar</button></span>
          </li>
          
          <li>
                 <span class= "izquierda" style="width: 200px" >2</span>
-                <span class= "izquierda" style=" width: 200px">Negociaeiojwefoijweofción</span>
+                <span class= "izquierda" style=" width: 200px">NegociaeiojwefoijweofciÃ³n</span>
                 <span class= "izquierda" style="width: 200px">juanete</span>
                 <span class= "izquierda" style="width: 220px"><button type="button" class="btn btn-success">Validar</button><button type="button" class="btn btn-danger" style="margin-left: 5px">Denegar</button></span>
          </li>
@@ -204,11 +204,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         
     <ul id= "13" class="list-group">
             <li class="tittle"><span class="logo-clr">ID</span>
-           <span style="margin-left:59px" class="logo-clr">Cursos</span>
-            <span style="margin-left:59px" class="logo-clr">Categoría</span>
-            <span  style="margin-left:59px" class="logo-clr">NºAlumnos</span>
-            <span style="margin-left:59px" class="logo-clr">Validado</span>
-             <span style="margin-left:59px" class="logo-clr">Material</span></li>
+           <span style="margin-left:49px" class="logo-clr">Cursos</span>
+            <span style="margin-left:49px" class="logo-clr">CategorÃ­a</span>
+            <span  style="margin-left:49px" class="logo-clr">NÂºAlumnos</span>
+            <span style="margin-left:49px" class="logo-clr">Validado</span>
+             <span style="margin-left:49px" class="logo-clr">Material</span></li>
 	  
         <li>
         <span class= "izquierda" style="width: 5%" >2</span>
@@ -296,30 +296,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <span class="logo-clr" style="margin-left:110px">Precio</span></li>
 	 <li>
          <span class= "izquierda" style="width: 210px" >2</span>
-         <span class= "izquierda" style=" width:210px">Negociación</span>
+         <span class= "izquierda" style=" width:210px">NegociaciÃ³n</span>
         <span class= "izquierda" style="width: 210px">juanete</span>
-        <span class= "izquierda" style="width: 210px">23.000€</span>
+        <span class= "izquierda" style="width: 210px">23.000â‚¬</span>
         </li>
         
          <li>
          <span class= "izquierda" style="width: 210px" >2</span>
-         <span class= "izquierda" style=" width:210px">Negociación</span>
+         <span class= "izquierda" style=" width:210px">NegociaciÃ³n</span>
         <span class= "izquierda" style="width: 210px">juanete</span>
-        <span class= "izquierda" style="width: 210px">23.000€</span>
+        <span class= "izquierda" style="width: 210px">23.000â‚¬</span>
         </li>
         
          <li>
          <span class= "izquierda" style="width: 210px" >2</span>
-         <span class= "izquierda" style=" width:210px">Negociación</span>
+         <span class= "izquierda" style=" width:210px">NegociaciÃ³n</span>
         <span class= "izquierda" style="width: 210px">juanete</span>
-        <span class= "izquierda" style="width: 210px">23.000€</span>
+        <span class= "izquierda" style="width: 210px">23.000â‚¬</span>
         </li>
         
          <li>
          <span class= "izquierda" style="width: 210px" >2</span>
-         <span class= "izquierda" style=" width:210px">Negociación</span>
+         <span class= "izquierda" style=" width:210px">NegociaciÃ³n</span>
         <span class= "izquierda" style="width: 210px">juanete</span>
-        <span class= "izquierda" style="width: 210px">23.000€</span>
+        <span class= "izquierda" style="width: 210px">23.000â‚¬</span>
         </li>
             
     </ul>
@@ -341,7 +341,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="#" class="gmail"> </a></li>
 						<li><a href="#" class="print"> </a></li>
 					</ul>
-				<p class="footer-copyrts">© 2015 Online School . Design  by OnlineSchool</a> </p>
+				<p class="footer-copyrts">Â© 2015 Online School . Design  by OnlineSchool</a> </p>
 		</div>
 	  <div class="clearfix"> </div>
 		</div>

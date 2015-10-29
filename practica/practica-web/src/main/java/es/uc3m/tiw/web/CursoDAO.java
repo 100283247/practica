@@ -6,13 +6,16 @@ import java.util.List;
 
 public class CursoDAO {
 	
-	public static void crearCurso(String nombre) {
+	public void crearCurso(Cursos curso) {
 		BaseDatos bbdd = BaseDatos.getInstance();
-		
-		
+		if(curso!=null){
+			bbdd.getCursos().add(curso);
+			}		
 	}
 	
-	public static Cursos recuperarCursoid (String id) {
+	
+	
+	public Cursos recuperarCursoid (String id) {
 		BaseDatos bbdd = BaseDatos.getInstance();
 		Cursos curse = new Cursos ();
 		for (int i = 0; i<= bbdd.getCursos().size();i++){
@@ -30,4 +33,9 @@ public class CursoDAO {
 	}
 
 
-}
+
+
+	}
+
+
+

@@ -59,7 +59,7 @@ public class ServletLoginUsuario extends HttpServlet {
 					if (persona.getEmail().equals(usuario) && persona.getPassword().equals(password)) {
 					sesion = request.getSession();
 					sesion.setAttribute("usuario", persona);
-					
+		
 					this.getServletConfig().getServletContext()
 					.getRequestDispatcher("/perfilusuario.jsp").forward(request, response);
 					}

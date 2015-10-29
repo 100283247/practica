@@ -116,10 +116,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<input placeholder="Primer Apellido" name = "apellido1" type="text" required="">	
 										<input placeholder="Segundo Apellido" name = "apellido2" type="text" required="">	
 										<input placeholder="Direccion" name = "direccion" type="text" required="">	
+										<input placeholder="Telefono" type="text" name = "telefono" required="">
 										<input placeholder="Email Address" name = "email" type="text" required="">									
-										<input placeholder="Password" type="password" name = "password" required="">
+										<input placeholder="ContraseÃ±a" type="password" name = "password" required="">
+										<input placeholder="Repita contraseÃ±a" type="password" name = "password2" required="">
 										<input type = "hidden" name = "accion" value = "registrar">	
-										<!--<input placeholder="Confirm Password" type="password" required="">-->
 										<div class="sign-up">
 											<input type="submit" name="registrar" value="Create Account"/>
 										</div>
@@ -168,7 +169,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="#" class="gmail"> </a></li>
 						<li><a href="#" class="print"> </a></li>
 					</ul>
-				<p class="footer-copyrts">Â© 2015 Online School . Design  by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+				<p class="footer-copyrts">Ã‚Â© 2015 Online School . Design  by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
 		</div>
 	  <div class="clearfix"> </div>
 		</div>

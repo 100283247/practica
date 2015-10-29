@@ -65,8 +65,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			   <div class="top-nav">
 			   		<span class="menu"> <img src="resources/images/icon.png" alt=""/></span>
 					<ul class="res">
-						<li><a  href="index.html" class="active"><span data-hover="Home"> Home</span></a></li>
-						<li><a href="#"><span data-hover="Courses">Courses</span></a></li>
+						<li><a  href="index.jsp" class="active"><span data-hover="Home"> Home</span></a></li>
+						<li><a href="browser.jsp"><span data-hover="Courses">Courses</span></a></li>
 						<li><a href="#"><span data-hover="Contact">Contact</span></a></li>
 					</ul>
 					<div class="clearfix"> </div>
@@ -83,8 +83,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			 <div class="top-nav2">
 				<div class="top-nav">
 				<ul class="res">
-					<li><a  href="login.html"><span  data-hover="SingUp">SingUp </span> </a></li>
-					<li><a  href="login.html"><span  data-hover="SingIn"> SingIn</span> </a></li>
+					<li><a  href="login.jsp"><span  data-hover="SingUp">SingUp </span> </a></li>
+					<li><a  href="login.jsp"><span  data-hover="SingIn"> SingIn</span> </a></li>
 				</ul>
 				</div>
 			</div>
@@ -98,29 +98,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="grid-main">
 	<div class="container">
 			<div class="process">
-				<h3>AÃ±adir un curso</h3>
-				<p>Para aÃ±adir un nuevo curso, completa todos los campos a continuaciÃ³n</p>
+				<h3>A&ntilde;adir un curso</h3>
+				<p>Para a&ntilde;adir un nuevo curso, completa todos los campos a continuaci&oacute;n</p>
 			    <div class="main2">
 			    	<div  class="wrap">
 						  <div class="Regisration">
 						  	<div class="Regisration-head">
 						    	<h2><span></span>Nuevo curso</h2>
 						 	 </div>
-						  	<form>
-						  		<input type="text" placeholder="TÃ­tulo del curso">
-						  		<textarea style="max-width:865px" type="text" placeholder="DescripciÃ³n del curso"></textarea>
-								<select name="programa" style="margin-top:5px; color:#D8D8D8">    
+						  	<form action="ServeletAltaCurso" method="post">
+						  		<input name="nombreCurso" type="text" placeholder="T&iacute;­tulo del curso">
+						  		<textarea name="descripcion" style="max-width:865px" type="text" placeholder="Descripci&oacute;n del curso"></textarea>
+								<select name="nivel" style="margin-top:5px; color:#D8D8D8">    
 									<option style="color:grey" selected disabled>Nivel de dificultad</option>
-									<option style="color:grey" value="BÃ¡sico">BÃ¡sico</option>
+									<option style="color:grey" value="Basico">B&aacute;sico</option>
 									<option style="color:grey" value="Intermedio">Intermedio</option>
 									<option style="color:grey" value="Avanzado">Avanzado</option>
 								</select>
-								<p style="color:grey;position: absolute;left:140px;top:215px">Imagen del curso:</p><input style="position: absolute;left:260px;top:215px" type="file"/>
-								<input type="text" placeholder="Horas de dedicaciÃ³n" style="margin-top:60px">
-						  		<input type="text" placeholder="Precio matrÃ­cula" style="margin-top:1px">
+								<p style="color:grey;position: absolute;left:140px;top:215px">Imagen del curso:</p><input accept=".gif, .jpg, .png , image/*" name="imagenCurso" style="position: absolute;left:360px;top:215px" type="file"/>
+								<input name="duracion" type="text" placeholder="Horas de dedicaci&iocute;n" style="margin-top:60px">
+						  		<input name="precio" type="text" placeholder="Precio matr&iacute;cula" style="margin-top:1px">
 								<div class="Remember-me">
 								<div class="submit">
-									<button onclick="myFunction()" style="color:white">Crear curso</button>
+									<input type=submit name="altacurso" onclick="myFunction()" style="color:white" vlaue=Crearcurso>
+									<input type="hidden" name="accion" value="altacurso" >
 								</div>
 									<div class="clear"> </div>
 								</div>

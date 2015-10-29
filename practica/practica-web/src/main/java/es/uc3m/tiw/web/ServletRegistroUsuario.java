@@ -55,7 +55,8 @@ public class ServletRegistroUsuario extends HttpServlet {
 			
 		//this.getServletConfig().getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
 		//} else {
-		request.setAttribute("Usuario", user.getNombre());
+		
+		request.setAttribute("Usuario", user);
 		request.setAttribute("type", "Alumno");
 		sesion =request.getSession();
 		sesion.setAttribute("Usuario", user);
