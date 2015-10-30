@@ -16,15 +16,10 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/ServletLoginUsuario")
 public class ServletLoginUsuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	Usuario persona = null;
+	Usuario persona = new Alumno();
 	HttpSession sesion;
 	BaseDatos bbdd = BaseDatos.getInstance();
 	
-	
-	
-	
-	
-       
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -45,7 +40,7 @@ public class ServletLoginUsuario extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-
+		int i =0;
 		String accion = (request.getParameter("accion")==null) ? "" : (String)request.getParameter("accion");
 		if (accion.equals("logear")){
 		if (request.getParameter("usuario") != null
@@ -57,16 +52,18 @@ public class ServletLoginUsuario extends HttpServlet {
 				while (iterador.hasNext()) {
 					persona = iterador.next();
 					if (persona.getEmail().equals(usuario) && persona.getPassword().equals(password)) {
-					sesion = request.getSession();
-					sesion.setAttribute("usuario", persona);
-		
-					this.getServletConfig().getServletContext()
-					.getRequestDispatcher("/perfilusuario.jsp").forward(request, response);
+						sesion = request.getSession();
+						sesion.setAttribute("Usuario", persona);
+					i++;
 					}
-				
 				}
+				if(i!=0){
+					this.getServletConfig().getServletContext()
+					.getRequestDispatcher("/perfilusuario.jsp").forward(request, response);	
+				}else{
 				this.getServletConfig().getServletContext()
 				.getRequestDispatcher("/login.jsp").forward(request, response);
+				}
 			}
 		}
 	}

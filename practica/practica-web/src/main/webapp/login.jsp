@@ -33,7 +33,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			});
 	</script>
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-</script>
 <script src="resources/js/jquery.min.js"></script>
 <script src="resources/js/easyResponsiveTabs.js" type="text/javascript"></script>
 				<script type="text/javascript">
@@ -111,7 +110,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="facts">
 									<!--login1-->
 								<div class="register">
-									<form action="ServletRegistro" method="post">	
+								</form>
+									<form action="ServletLoginUsuario" method="post">										
+										<input placeholder="Email Address" class="mail" name ="usuario" type="text" required="">									
+										<input placeholder="Password" class="lock" name ="password" type="password" required="">	
+										<input type = "hidden" name = "accion" value = "logear">									
+										<div class="sign-up">
+											<input type="submit" name="logear" value="Submit"/>
+										</div>
+									</form>
+								</div>
+							</div>
+				 </div>		
+				 <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+					  <div class="facts">
+						  <div class="register">
+						  <form action="ServletRegistro" method="post">	
 										<input placeholder="Name" name = "nombre_Usuario" type="text" required="">
 										<input placeholder="Primer Apellido" name = "apellido1" type="text" required="">	
 										<input placeholder="Segundo Apellido" name = "apellido2" type="text" required="">	
@@ -124,21 +138,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="sign-up">
 											<input type="submit" name="registrar" value="Create Account"/>
 										</div>
-									</form>
-								</div>
-							</div>
-				 </div>		
-				 <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
-					  <div class="facts">
-						  <div class="register">
-									<form action="ServletLoginUsuario" method="post">										
-										<input placeholder="Email Address" class="mail" name ="usuario" type="text" required="">									
-										<input placeholder="Password" class="lock" name ="password" type="password" required="">	
-										<input type = "hidden" name = "accion" value = "logear">									
-										<div class="sign-up">
-											<input type="submit" name="logear" value="Submit"/>
-										</div>
-									</form>
 								</div>
 					  </div> 
 				  </div> 			        					            	      

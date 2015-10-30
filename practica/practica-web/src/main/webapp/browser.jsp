@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@page import="es.uc3m.tiw.web.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -47,6 +48,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					});
 				   </script>
 </head>
+<%
+		BaseDatos bbdd = BaseDatos.getInstance();
+		CursoDAO cursoDao = new CursoDAO ();
+		Cursos curso = new Cursos();	
+		
+		curso.setNombreCurso("Historia del Arte");
+		curso.setIdprofesor("e.garciacentenera@gmail.com");
+		curso.setProfesor("Eduardo Garcia"); 
+		cursoDao.crearCurso(curso);
+		
+		curso.setNombreCurso("Informatica");
+		curso.setIdprofesor("e.garciacentenera@gmail.com");
+		curso.setProfesor("Eduardo Garcia"); 
+		cursoDao.crearCurso(curso);
+		
+		curso.setNombreCurso("Matematica discreta");
+		curso.setIdprofesor("e.garciacentenera@gmail.com");
+		curso.setProfesor("Eduardo Garcia"); 
+		cursoDao.crearCurso(curso);
+		
+%>
 <body>
 <!-- //end-smoth-scrolling -->
 <!--header start here-->
@@ -127,62 +149,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="col-md-8 courses">
 						<ul class="list-courses">
+						<%	
+								for (int i =0; i<bbdd.getCursos().size();i++){
+										Cursos cursos= bbdd.getCursos().get(i);
+							
+								%>
 								<li class="list-courses-contain">
 									<img src="resources/images/book.jpg">
 									<div>
-										<h4>Interfaces de Usuario</h4>
-										<p>DiseÃ±o grÃ¡fico<p>
+										<h4><%=cursos.getNombreCurso()%></h4>
+										<p><%=cursos.getProfesor() %><p>
 									</div>
 								</li>
-								<li class="list-courses-contain">
-									<img src="images/book.jpg">
-									<div>
-										<h4>Interfaces de Usuario</h4>
-										<p>DiseÃ±o grÃ¡fico<p>
-									</div>
-								</li>
-								<li class="list-courses-contain">
-									<img src="resources/images/book.jpg">
-									<div>
-										<h4>Interfaces de Usuario</h4>
-										<p>DiseÃ±o grÃ¡fico<p>
-									</div>
-								</li>
-								<li class="list-courses-contain">
-									<img src="resources/images/book.jpg">
-									<div>
-										<h4>Interfaces de Usuario</h4>
-										<p>DiseÃ±o grÃ¡fico<p>
-									</div>
-								</li>
-								<li class="list-courses-contain">
-									<img src="resources/images/book.jpg">
-									<div>
-										<h4>Interfaces de Usuario</h4>
-										<p>DiseÃ±o grÃ¡fico<p>
-									</div>
-								</li>
-								<li class="list-courses-contain">
-									<img src="resources/images/book.jpg">
-									<div>
-										<h4>Interfaces de Usuario</h4>
-										<p>DiseÃ±o grÃ¡fico<p>
-									</div>
-								</li>
-								<li class="list-courses-contain">
-									<img src="resources/images/book.jpg">
-									<div>
-										<h4>Interfaces de Usuario</h4>
-										<p>DiseÃ±o grÃ¡fico<p>
-									</div>
-								</li>
-								<li class="list-courses-contain">
-									<img src="resources/images/book.jpg">
-									<div>
-										<h4>Interfaces de Usuario</h4>
-										<p>DiseÃ±o grÃ¡fico<p>
-									</div>
-								</li>
+								<%
+								}
+						 %>
 							</ul>
 					
 					</div>

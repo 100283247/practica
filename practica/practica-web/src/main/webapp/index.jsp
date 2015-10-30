@@ -1,5 +1,57 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="es.uc3m.tiw.web.*" %>
+ <%		
+ 	CursoDAO cursoDao = new CursoDAO();
+	UsuarioDAO usuarioDao = new UsuarioDAO();
+	
+	Cursos curso1 = new Cursos();
+	curso1.setNombreCurso("Informatica");
+	curso1.setDescripcion("Es un curso cojonudo");
+	curso1.setIdprofesor("e.garciacentenera@gmail.es");
+	curso1.setProfesor("Eduardo Garcia");
+	cursoDao.crearCurso(curso1);
+	Cursos curso2 = new Cursos();
+	curso2.setNombreCurso("Matematica Discreta");
+	curso2.setDescripcion("Es un curso cojonudo");
+	curso2.setIdprofesor("e.garciacentenera@gmail.es");
+	curso2.setProfesor("Eduardo Garcia");
+	cursoDao.crearCurso(curso2);
+	Cursos curso3 = new Cursos();
+	curso3.setNombreCurso("Historia del Arte");
+	curso3.setDescripcion("Es un curso cojonudo");
+	curso3.setIdprofesor("e.garciacentenera@gmail.es");
+	curso3.setProfesor("Eduardo Garcia");
+	cursoDao.crearCurso(curso3);
+	Cursos curso4 = new Cursos();
+	curso4.setNombreCurso("Tiw");
+	curso4.setDescripcion("Es un curso cojonudo");
+	curso4.setIdprofesor("e.garciacentenera@gmail.es");
+	curso4.setProfesor("Eduardo Garcia");
+	cursoDao.crearCurso(curso4);
+	
+	Usuario usuario1 = new Alumno();
+	usuario1.setNombre("Eduardo");
+	usuario1.setApellido1("Garcia");
+	usuario1.setApellido2("Centenera");
+	usuario1.setEmail("e.garciacentenera@gmail.com");
+	usuario1.setPassword("Hoces1com.");
+	usuarioDao.crearUsuario(usuario1);
+	Usuario usuario2 = new Alumno();
+	usuario2.setNombre("Fernando");
+	usuario2.setApellido1("Garcia");
+	usuario2.setApellido2("Centenera");
+	usuario2.setEmail("e.garciacentenera@gmail.es");
+	usuario2.setPassword("Hoces1com.");
+	usuarioDao.crearUsuario(usuario2);
+	Usuario usuario3 = new Alumno();
+	usuario3.setNombre("Jose");
+	usuario3.setApellido1("Garcia");
+	usuario3.setApellido2("Centenera");
+	usuario3.setEmail("e.garciacentenera@hotmail.com");
+	usuario3.setPassword("Hoces1com.");
+	usuarioDao.crearUsuario(usuario3);
+	 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -77,8 +129,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			 <div class="top-nav2">
 				<div class="top-nav">
 				<ul class="res">
-					<li><a  href="login.jsp"><span  data-hover="SingUp">SingUp </span> </a></li>
-					<li><a  href="login.jsp"><span  data-hover="SingIn"> SingIn</span> </a></li>
+					<li><a  href="login.jsp"><span  data-hover="SingIn">SingIn </span> </a></li>
+					<li><a  href="singup.jsp"><span  data-hover="SingUp"> SingUp</span> </a></li>
 				</ul>
 				</div>
 			</div>

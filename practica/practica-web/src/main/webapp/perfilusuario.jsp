@@ -59,14 +59,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		BaseDatos bbdd = BaseDatos.getInstance();
 		CursoDAO cursoDao = new CursoDAO ();
 		Cursos curso = new Cursos();
-		
-		for(int i = 0; i<4;i++){
-			
-		curso.setIdprofesor("e.garciacentenera"+i+"@gmail.es");
-		curso.setNombreCurso("Historia de arte contemporaneo");
-		
-		cursoDao.crearCurso(curso);
-		}
 %>				   
 				   
 </head>
@@ -146,9 +138,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<ul style="list-style-type:circle">
 								<%
 								int j = 0;
-								for (int i =0; i<bbdd.getCursos().size();i++){
-									if (bbdd.getCursos().get(i).getIdprofesor().equals(usuario.getEmail())){
-										Cursos pedro= bbdd.getCursos().get(i);
+								for (int x =0; x<bbdd.getCursos().size();x++){
+									if (bbdd.getCursos().get(x).getIdprofesor().equals(usuario.getEmail())){
+										Cursos pedro= bbdd.getCursos().get(x);
 										j++;
 								%>
 								 <li style="font-style:italic; margin-left: 70px"><%=pedro.getNombreCurso() %><p><%=pedro.getIdprofesor() %></p></li>
