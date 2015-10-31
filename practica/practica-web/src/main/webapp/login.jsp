@@ -132,8 +132,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<input placeholder="Direccion" name = "direccion" type="text" required="">	
 										<input placeholder="Telefono" type="text" name = "telefono" required="">
 										<input placeholder="Email Address" name = "email" type="text" required="">									
-										<input placeholder="ContraseÃ±a" type="password" name = "password" required="">
-										<input placeholder="Repita contraseÃ±a" type="password" name = "password2" required="">
+										<input placeholder="Contraseñaa" type="password" name = "password" required="">
+										<input placeholder="Repita contraseña" type="password" name = "password2" required="">
 										<input type = "hidden" name = "accion" value = "registrar">	
 										<div class="sign-up">
 											<input type="submit" name="registrar" value="Create Account"/>

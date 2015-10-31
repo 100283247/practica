@@ -30,7 +30,7 @@ public class ServletRegistroUsuario extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			System.out.println("no entro en el post");
+			
 	}
 
 	/**
@@ -50,17 +50,26 @@ public class ServletRegistroUsuario extends HttpServlet {
 			user.setDireccion(new String(request.getParameter("direccion")));
 			user.setTelefono(request.getParameter("telefono"));
 			user.setEmail(request.getParameter("email"));
-			user.setPassword(request.getParameter("password"));
+ 			user.setPassword(request.getParameter("password"));
 			user.setNombre(new String(request.getParameter("nombre_Usuario")));
 			user.setApellido1(request.getParameter("apellido1"));
 			user.setApellido2(request.getParameter("apellido2"));
 			
 			
-			//if (!user.ValidarNombreUsuario() || !user.validarApellido1() || !user.ValidarApellido2() ||  !user.validarTelefono()|| !user.validarContrasenia()) {
+			if (!user.ValidarNombreUsuario() || 
+					!user.validarApellido1() || 
+					!user.ValidarApellido2() || 
+					!user.validarTelefono()||
+					!user.validarEmail() ||
+					!user.validarContrasenia()||
+					!user.validarSegundaContrasenia(request.getParameter("password2"))) {
 				
-			//this.getServletConfig().getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
-			//} else {
+			this.getServletConfig().getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
+			} else {
 			
+			request.setAttribute("Usuario", user.getNombre());
+			request.setAttribute("type", "Alumno");
+			sesion =request.getSession();
 			sesion.setAttribute("Usuario", user);
 			userDao.crearUsuario(user);
 			this.getServletConfig().getServletContext().getRequestDispatcher("/perfilusuario.jsp").forward(request, response);
@@ -68,5 +77,4 @@ public class ServletRegistroUsuario extends HttpServlet {
 		}
 	}
 	
-
-//}
+	}

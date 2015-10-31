@@ -51,6 +51,24 @@
 	usuario3.setEmail("e.garciacentenera@hotmail.com");
 	usuario3.setPassword("Hoces1com.");
 	usuarioDao.crearUsuario(usuario3);
+	
+	Usuario usuario4 = new Alumno ();
+	usuario4.setNombre("Jose");
+	usuario4.setApellido1("Garcia");
+	usuario4.setApellido2("Centenera");
+	usuario4.setEmail("jose@hotmail.com");
+	usuario4.setPassword("Jose1-jose");
+	usuarioDao.crearUsuario(usuario4);
+	
+	Usuario admin = new Administrador ();
+	admin.setNombre("admin");
+	admin.setApellido1("admin");
+	admin.setApellido2("admin");
+	admin.setEmail("administrador@administrador.com");
+	admin.setPassword("Admin1-admin");
+	usuarioDao.crearUsuario(admin);
+	
+	
 	 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

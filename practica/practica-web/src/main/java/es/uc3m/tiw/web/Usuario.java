@@ -176,44 +176,43 @@ public abstract class Usuario {
 			return false;
 	}
 	
-	protected boolean validarContrasenia (){
-		
-		//definimos las variables globales que vamos a utilizar, para la comprobación
-		//de la composición de la contraseña.
-		int numero=0;
-		int minuscula =0;
-		int mayuscula =0;
-		int simbolo =0;
-				
-		for (int i =0; i<password.length();i++){
-			if (simbolo>1){
-				password="";
+	protected boolean validarContrasenia() {
+		int nums = 0;
+		int charMin = 0;
+		int charMay = 0;
+		int simb = 0;
+		for (int i = 0; i < password.length(); i++) {
+			if (simb > 1) {
+				password = "";
 				return false;
 			}
-			if (password.charAt(i)>=48 && password.charAt(i)<=57 && numero<1){
-				numero ++;
-			}	
-			
-			if (password.charAt(i)>=65 && password.charAt(i)<=90 && mayuscula<1){
-				mayuscula ++;
-			
-				}
-			if (password.charAt(i)>=97 && password.charAt(i)>=122 && mayuscula<1){
-				mayuscula ++;
+			if (password.charAt(i) >= 48 && password.charAt(i) <= 57 && nums < 1) {
+				nums++;
 			}
-			
-			if (password.charAt(i) == '.'|| password.charAt(i)==':' || password.charAt(i)=='-'){
-				simbolo ++;
+			if (password.charAt(i) >= 65 && password.charAt(i) <= 90 && charMin < 1) {
+				charMin++;
+			}
+			if (password.charAt(i) >= 97 && password.charAt(i) <= 122 && charMay < 1) {
+				charMay++;
+			}
+			if (password.charAt(i) == '.' || password.charAt(i) == ':'
+					|| password.charAt(i) == '-') {
+				simb++;
 			}
 		}
-		
-		//comprobamos que la contraseña está entre ocho y dieciseis caracteres. 
-		if (numero==1 && minuscula ==1 && mayuscula == 1&& simbolo == 1&& 
-				password.length()>=8 && password.length()<=16){
+		if (nums == 1 && charMin >= 1 && charMay == 1 && simb == 1
+				&& password.length() >= 8 && password.length() <= 16) {
 			return true;
 		}
-			password="";
-			return false;
+		password = "";
+		return false;
+	}
+	
+	protected boolean validarSegundaContrasenia(String password2) {
+		if (password.equals(password2))
+			return true;
+		password = "";
+		return false;
 	}
 	
 }

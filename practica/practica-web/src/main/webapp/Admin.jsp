@@ -205,8 +205,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <ul id= "13" class="list-group">
             <li class="tittle"><span class="logo-clr">ID</span>
            <span style="margin-left:49px" class="logo-clr">Cursos</span>
-            <span style="margin-left:49px" class="logo-clr">CategorÃ­a</span>
-            <span  style="margin-left:49px" class="logo-clr">NÂºAlumnos</span>
+            <span style="margin-left:49px" class="logo-clr">Categor&iacute;a</span>
+            <span  style="margin-left:49px" class="logo-clr">NºAlumnos</span>
             <span style="margin-left:49px" class="logo-clr">Validado</span>
              <span style="margin-left:49px" class="logo-clr">Material</span></li>
 	  
@@ -296,30 +296,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <span class="logo-clr" style="margin-left:110px">Precio</span></li>
 	 <li>
          <span class= "izquierda" style="width: 210px" >2</span>
-         <span class= "izquierda" style=" width:210px">NegociaciÃ³n</span>
+         <span class= "izquierda" style=" width:210px">Negociaci&oacute;n</span>
         <span class= "izquierda" style="width: 210px">juanete</span>
-        <span class= "izquierda" style="width: 210px">23.000â‚¬</span>
+        <span class= "izquierda" style="width: 210px">23.000&euro;</span>
         </li>
         
          <li>
          <span class= "izquierda" style="width: 210px" >2</span>
-         <span class= "izquierda" style=" width:210px">NegociaciÃ³n</span>
+         <span class= "izquierda" style=" width:210px">Negociaci&oacute;n</span>
         <span class= "izquierda" style="width: 210px">juanete</span>
-        <span class= "izquierda" style="width: 210px">23.000â‚¬</span>
+        <span class= "izquierda" style="width: 210px">23.000&euro;</span>
         </li>
         
          <li>
          <span class= "izquierda" style="width: 210px" >2</span>
-         <span class= "izquierda" style=" width:210px">NegociaciÃ³n</span>
+         <span class= "izquierda" style=" width:210px">Negociaci&oacute;n</span>
         <span class= "izquierda" style="width: 210px">juanete</span>
-        <span class= "izquierda" style="width: 210px">23.000â‚¬</span>
+        <span class= "izquierda" style="width: 210px">23.000&euro;</span>
         </li>
         
          <li>
          <span class= "izquierda" style="width: 210px" >2</span>
-         <span class= "izquierda" style=" width:210px">NegociaciÃ³n</span>
+         <span class= "izquierda" style=" width:210px">Negociaci&oacute;n</span>
         <span class= "izquierda" style="width: 210px">juanete</span>
-        <span class= "izquierda" style="width: 210px">23.000â‚¬</span>
+        <span class= "izquierda" style="width: 210px">23.000&euro;</span>
         </li>
             
     </ul>

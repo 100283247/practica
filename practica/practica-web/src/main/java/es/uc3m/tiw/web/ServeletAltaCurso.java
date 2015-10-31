@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.xml.ws.spi.http.HttpContext;
 
 /**
  * Servlet implementation class ServeletAltaCurso
@@ -20,6 +21,7 @@ public class ServeletAltaCurso extends HttpServlet {
 	HttpSession sesion;
 	BaseDatos bbdd = BaseDatos.getInstance();
 	Usuario persona = null;
+	HttpContext context;
 	
 	
     /**
