@@ -37,6 +37,7 @@
 	usuario1.setEmail("e.garciacentenera@gmail.com");
 	usuario1.setPassword("Hoces1com.");
 	usuarioDao.crearUsuario(usuario1);
+	
 	Usuario usuario2 = new Alumno();
 	usuario2.setNombre("Fernando");
 	usuario2.setApellido1("Garcia");
@@ -44,6 +45,7 @@
 	usuario2.setEmail("e.garciacentenera@gmail.es");
 	usuario2.setPassword("Hoces1com.");
 	usuarioDao.crearUsuario(usuario2);
+	
 	Usuario usuario3 = new Alumno();
 	usuario3.setNombre("Jose");
 	usuario3.setApellido1("Garcia");
@@ -60,15 +62,14 @@
 	usuario4.setPassword("Jose1-jose");
 	usuarioDao.crearUsuario(usuario4);
 	
-	Usuario admin = new Administrador ();
-	admin.setNombre("admin");
-	admin.setApellido1("admin");
-	admin.setApellido2("admin");
+	Usuario admin = new Alumno();
+	admin.setNombre("Jose");
+	admin.setApellido1("Garcia");
+	admin.setApellido2("Centenera");
 	admin.setEmail("administrador@administrador.com");
 	admin.setPassword("Admin1-admin");
 	usuarioDao.crearUsuario(admin);
-	
-	
+
 	 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

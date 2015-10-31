@@ -55,6 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					});
 				   </script>
 <%
+	
 	Usuario usuario = (Usuario) session.getAttribute("Usuario");
 		BaseDatos bbdd = BaseDatos.getInstance();
 		CursoDAO cursoDao = new CursoDAO ();
@@ -136,7 +137,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								
 									<p>- Cursos que estÃƒÂ¡s impartiendo</p>
 								<ul style="list-style-type:circle">
-								<%
+									<%
 								int j = 0;
 								for (int x =0; x<bbdd.getCursos().size();x++){
 									if (bbdd.getCursos().get(x).getIdprofesor().equals(usuario.getEmail())){

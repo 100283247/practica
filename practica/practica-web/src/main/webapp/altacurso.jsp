@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+     <%@page import="es.uc3m.tiw.web.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -38,6 +39,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				});
 			});
 	</script>
+	<% Usuario usuario = (Usuario) session.getAttribute("Usuario");
+	%>
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 </script>
 <script src="resources/js/jquery.min.js"></script>
@@ -116,11 +119,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<option style="color:grey" value="Avanzado">Avanzado</option>
 								</select>
 								<p style="color:grey;position: absolute;left:140px;top:215px">Imagen del curso:</p><input accept=".gif, .jpg, .png , image/*" name="imagenCurso" style="position: absolute;left:360px;top:215px" type="file"/>
-								<input name="duracion" type="text" placeholder="Horas de dedicaci&iocute;n" style="margin-top:60px">
+								<input name="duracion" type="text" placeholder="Horas de dedicaci&iacute;n" style="margin-top:60px">
 						  		<input name="precio" type="text" placeholder="Precio matr&iacute;cula" style="margin-top:1px">
 								<div class="Remember-me">
 								<div class="submit">
-									<input type=submit name="altacurso" onclick="myFunction()" style="color:white" vlaue=Crearcurso>
+									<input type=submit name="altacurso"  style="color:white" value=Crearcurso>
 									<input type="hidden" name="accion" value="altacurso" >
 								</div>
 									<div class="clear"> </div>

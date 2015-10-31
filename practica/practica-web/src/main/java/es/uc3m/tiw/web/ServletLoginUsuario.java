@@ -16,8 +16,7 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/ServletLoginUsuario")
 public class ServletLoginUsuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	Usuario persona = null;
-	Administrador admin = null;
+	Usuario persona = new Alumno ();
 	HttpSession sesion;
 	BaseDatos bbdd = BaseDatos.getInstance();
 	
@@ -45,36 +44,42 @@ public class ServletLoginUsuario extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-
-		String accion = (request.getParameter("accion")==null) ? "" : (String)request.getParameter("accion");
-		if (accion.equals("logear")){
-		if (request.getParameter("usuario") != null
-				&& request.getParameter("password") != null) {
-				String usuario = request.getParameter("usuario");
-				String password = request.getParameter("password");
-				
-				Iterator<Usuario> iterador = bbdd.getUsuarios().iterator();
-				while (iterador.hasNext()) {
-					persona = iterador.next();
-					if (persona.getEmail().equals(usuario) && persona.getPassword().equals(password)) {
-					sesion = request.getSession();
-					sesion.setAttribute("usuario", persona);
-					
-					if(persona.getEmail().matches("administrador@administrador.com")){
+	       
+        int i =0;
+        String accion = (request.getParameter("accion")==null) ? "" : (String)request.getParameter("accion");
+        if (accion.equals("logear")){
+        if (request.getParameter("usuario") != null
+                && request.getParameter("password") != null) {
+                String usuario = request.getParameter("usuario");
+                String password = request.getParameter("password");
+               
+                Iterator<Usuario> iterador = bbdd.getUsuarios().iterator();
+                while (iterador.hasNext()) {
+                    persona = iterador.next();
+                    if (persona.getEmail().equals(usuario) && persona.getPassword().equals(password)) {
+                        sesion = request.getSession();
+                        sesion.setAttribute("Usuario", persona);
+                    i++;
+                    }
+                }
+                if(i!=0){
+                	if(usuario.equals("administrador@administrador.com")&&
+                			password.equals("Admin1-admin")){
 						this.getServletConfig().getServletContext()
 						.getRequestDispatcher("/Admin.jsp").forward(request, response);
-				}else{
-					this.getServletConfig().getServletContext()
-					.getRequestDispatcher("/perfilusuario.jsp").forward(request, response);
-					}
-				  }
-				}
-				this.getServletConfig().getServletContext()
-				.getRequestDispatcher("/login.jsp").forward(request, response);
-			}
-		}
-	}
+						
+                	}else{
+                		this.getServletConfig().getServletContext()
+                    .getRequestDispatcher("/perfilusuario.jsp").forward(request, response);   
+                	}
+                }else{
+                this.getServletConfig().getServletContext()
+                .getRequestDispatcher("/login.jsp").forward(request, response);
+                }
+            }
+        }
+    }
 }
-
+					
+				
 

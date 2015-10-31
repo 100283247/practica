@@ -17,11 +17,11 @@ import javax.xml.ws.spi.http.HttpContext;
 @WebServlet("/ServeletAltaCurso")
 public class ServeletAltaCurso extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	Cursos curso = null;
+	//Cursos curso = null;
 	HttpSession sesion;
 	BaseDatos bbdd = BaseDatos.getInstance();
-	Usuario persona = null;
-	HttpContext context;
+	//Usuario persona = null;
+
 	
 	
     /**
@@ -48,8 +48,6 @@ public class ServeletAltaCurso extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		Usuario persona = (Usuario) request.getSession().getAttribute("Usuario");
-		if (persona != null) {
 			
 			Cursos curso = new Cursos();
 			CursoDAO cursoDao = new CursoDAO();
@@ -66,31 +64,26 @@ public class ServeletAltaCurso extends HttpServlet {
 				curso.setHorasDedicacion(request.getParameter("duracion"));
 				curso.setPrecio(request.getParameter("precio"));
 				curso.setValidad("NO");
-				curso.setIdprofesor(persona.getEmail());
-				curso.setProfesor(persona.getNombre()+" "+persona.getApellido1()+" "+persona.getApellido2());
+				//curso.setIdprofesor(persona.getEmail());
+				//curso.setProfesor(persona.getNombre()+" "+persona.getApellido1()+" "+persona.getApellido2());
 				
 					
-				if (!curso.validarHorasDedicacion() ||
+				/*if (!curso.validarHorasDedicacion() ||
 						!curso.validarNombreCurso() ||
 						!curso.validarPrecioCurso()) {			
 						this.getServletConfig().getServletContext().getRequestDispatcher("/altacurso.jsp").forward(request, response);
-				}
+				}*/
 			
 				sesion = request.getSession();
 				sesion.setAttribute("curso", curso);
 				//System.out.println(persona.getEmail());
 
-				System.out.println("entra if");
+				//System.out.println("entra if");
 				cursoDao.crearCurso(curso);
 				this.getServletConfig().getServletContext().getRequestDispatcher("/perfilusuario.jsp").forward(request, response);
-				
-			}else{
-				this.getServletConfig().getServletContext().getRequestDispatcher("/altacurso.jsp").forward(request, response);		
-			}
-		}else{
-			this.getServletConfig().getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
-		}
+				}
 	}
+	
 
 	public
 	String crearId() {

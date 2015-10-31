@@ -44,7 +44,54 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 </script>
     
-    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+	
+	
+		<!-- Scripts de validaciones -->
+	
+	<script>
+	$(document).ready(function(){
+	    $("#validar").click(function(){
+	        $("#21").hide();
+	        $("#31").fadeIn();
+	        $("#31").delay(400).fadeOut();
+	    });
+	});
+	</script>
+	<script>
+	
+	$(document).ready(function(){
+	    $("#validar2").click(function(){
+	        $("#22").hide();
+	        $("#31").fadeIn();
+	        $("#31").delay(400).fadeOut();
+	    });
+	});
+	</script>
+		<script>
+	$(document).ready(function(){
+	    $("#denegar").click(function(){
+	        $("#21").hide();
+	        $("#32").fadeIn();
+	        $("#32").delay(400).fadeOut();
+	      
+	    });
+	});
+	</script>
+	<script>
+	
+	$(document).ready(function(){
+	    $("#denegar2").click(function(){
+	        $("#22").hide();
+	        $("#32").fadeIn();
+	        $("#32").delay(400).fadeOut();
+	     
+	    });
+	    });
+	</script>
+	
+	<!-- Scripts de movimiento entre cursos, validaciones, precios y alumnos -->
 <script>
     $(document).ready(function(){
 	 $("#1").click(function(){
@@ -156,7 +203,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <div class="listaAdmin">
-     
+    
+      <div class= "validadoDenegado" id="31">
+        <p style="margin-top:40px; color: green">Curso Validado</p>
+        
+        </div>
+       
+       <div class= "validadoDenegado" id="32">
+        <p style="margin-top:40px; color: red">Curso Denegado</p>
+        
+        </div>
        
         <div class="listaAdminTitul">
              
@@ -169,9 +225,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </ul>
             
         </div>
-    
         
-        
+       
+ 
        <div class="listadoCosas">
            
            <img src="resources/images/sitios.jpg" id="15"></img>
@@ -182,23 +238,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <li class="tittle"><span class="logo-clr">ID</span>
                 <span class="logo-clr" style="margin-left:99px">Cursos</span>
                 <span class="logo-clr" style="margin-left:99px">Profesor</span>
-                <span class="logo-clr" style="margin-left:99px">ValidaciÃ³n</span>
+                <span class="logo-clr" style="margin-left:99px">Validaci&oacute;n</span>
          </li>
-            <li>
-                <span class= "izquierda" style="width: 200px" >1</span>
-                <span class= "izquierda" style=" width: 200px">NegociaciÃ³n</span>
+            <li id="21">
+                <span class= "izquierda" style="width: 200px" >123456</span>
+                <span class= "izquierda" style=" width: 200px">Negociaci&oacute;n</span>
                 <span  class= "izquierda" style="width: 200px">Alberto Rodriguez</span>
-                <span  class= "izquierda" style="width: 220px"><button type="button" class="btn btn-success">Validar</button><button type="button" class="btn btn-danger" style="margin-left:5px">Denegar</button></span>
+                <span  class= "izquierda" style="width: 220px"><button id ="validar" type="button" class="btn btn-success">Validar</button><button type="button" id ="denegar" class="btn btn-danger" style="margin-left:5px">Denegar</button></span>
          </li>
          
-         <li>
-                <span class= "izquierda" style="width: 200px" >2</span>
-                <span class= "izquierda" style=" width: 200px">NegociaeiojwefoijweofciÃ³n</span>
-                <span class= "izquierda" style="width: 200px">juanete</span>
-                <span class= "izquierda" style="width: 220px"><button type="button" class="btn btn-success">Validar</button><button type="button" class="btn btn-danger" style="margin-left: 5px">Denegar</button></span>
+         <li id="22">
+                <span class= "izquierda" style="width: 200px" >235522</span>
+                <span class= "izquierda" style=" width: 200px">Business Intelligence</span>
+                <span class= "izquierda" style="width: 200px">Fernando Lamb&aacute;s</span>
+                <span class= "izquierda" style="width: 220px"><button id ="validar2" type="button" class="btn btn-success">Validar</button><button type="button" id ="denegar2" class="btn btn-danger" style="margin-left: 5px">Denegar</button></span>
          </li>
      
 	</ul> 
+	
+	
            
 <!--Cursos-->
         
@@ -206,42 +264,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <li class="tittle"><span class="logo-clr">ID</span>
            <span style="margin-left:49px" class="logo-clr">Cursos</span>
             <span style="margin-left:49px" class="logo-clr">Categor&iacute;a</span>
-            <span  style="margin-left:49px" class="logo-clr">NºAlumnos</span>
+            <span  style="margin-left:49px" class="logo-clr">NÂºAlumnos</span>
             <span style="margin-left:49px" class="logo-clr">Validado</span>
              <span style="margin-left:49px" class="logo-clr">Material</span></li>
 	  
         <li>
-        <span class= "izquierda" style="width: 5%" >2</span>
+        <span class= "izquierda" style="width: 5%" >123423</span>
                 <span class= "izquierda" style=" width: 25%">Business Intelligence</span>
-            <span class= "izquierda" style="width: 15%">Arte</span>
-                <span class= "izquierda" style="width: 15%">234</span>
+            <span class= "izquierda" style="width: 15%">Finanzas</span>
+                <span class= "izquierda" style="width: 15%">34</span>
             <span class= "izquierda" style="width: 20%">Si</span>
             <span class= "izquierda" style="width: 20%">Si</span>
         </li>
         
          <li>
-        <span class= "izquierda" style="width: 5%" >2</span>
-                <span class= "izquierda" style=" width: 25%">Business Intelligence</span>
-            <span class= "izquierda" style="width: 15%">Arte</span>
-                <span class= "izquierda" style="width: 15%">234</span>
+        <span class= "izquierda" style="width: 5%" >123424</span>
+                <span class= "izquierda" style=" width: 25%">Arquitectura</span>
+            <span class= "izquierda" style="width: 15%">Inform&aacute;tica</span>
+                <span class= "izquierda" style="width: 15%">23</span>
             <span class= "izquierda" style="width: 20%">Si</span>
             <span class= "izquierda" style="width: 20%">Si</span>
         </li>
             
          <li>
-        <span class= "izquierda" style="width: 5%" >2</span>
-                <span class= "izquierda" style=" width: 25%">Business Intelligence</span>
-            <span class= "izquierda" style="width: 15%">Arte</span>
-                <span class= "izquierda" style="width: 15%">234</span>
+        <span class= "izquierda" style="width: 5%" >234552</span>
+                <span class= "izquierda" style=" width: 25%">interfaces</span>
+            <span class= "izquierda" style="width: 15%">Inform&aacute;tica</span>
+                <span class= "izquierda" style="width: 15%">24</span>
             <span class= "izquierda" style="width: 20%">Si</span>
             <span class= "izquierda" style="width: 20%">Si</span>
         </li>
             
          <li>
-        <span class= "izquierda" style="width: 5%" >2</span>
-                <span class= "izquierda" style=" width: 25%">Business Intelligence</span>
-            <span class= "izquierda" style="width: 15%">Arte</span>
-                <span class= "izquierda" style="width: 15%">234</span>
+        <span class= "izquierda" style="width: 5%" >987652</span>
+                <span class= "izquierda" style=" width: 25%">Planificaci&oacute;n</span>
+            <span class= "izquierda" style="width: 15%">Varios</span>
+                <span class= "izquierda" style="width: 15%">14</span>
             <span class= "izquierda" style="width: 20%">Si</span>
             <span class= "izquierda" style="width: 20%">Si</span>
         </li>
@@ -261,13 +319,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li>
                 <span class= "izquierda" style="width: 40%" >Benito Hernandez</span>
                 <span class= "izquierda" style=" width: 30%">14</span>
-                <span  class= "izquierda" style="width: 30%">111</span>
+                <span  class= "izquierda" style="width: 30%">11</span>
                  </li>    
                 
                 <li>
                 <span class= "izquierda" style="width: 40%" >Luis Ochoa</span>
                 <span class= "izquierda" style=" width: 30%">34</span>
-                <span  class= "izquierda" style="width: 30%">112</span>
+                <span  class= "izquierda" style="width: 30%">12</span>
                  </li>  
                 
                 <li>
@@ -278,8 +336,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 
                 <li>
                 <span class= "izquierda" style="width: 40%" >Fernando Rodriguez</span>
-                <span class= "izquierda" style=" width: 30%">4</span>
-                <span  class= "izquierda" style="width: 30%">1</span>
+                <span class= "izquierda" style=" width: 30%">14</span>
+                <span  class= "izquierda" style="width: 30%">21</span>
                  </li>  
 	
                 
@@ -295,31 +353,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <span class="logo-clr" style="margin-left:110px">Profesor</span>
             <span class="logo-clr" style="margin-left:110px">Precio</span></li>
 	 <li>
-         <span class= "izquierda" style="width: 210px" >2</span>
+         <span class= "izquierda" style="width: 210px" >123422</span>
          <span class= "izquierda" style=" width:210px">Negociaci&oacute;n</span>
-        <span class= "izquierda" style="width: 210px">juanete</span>
+        <span class= "izquierda" style="width: 210px">Fernando Lamb&aacute;s</span>
+        <span class= "izquierda" style="width: 210px">9.000&euro;</span>
+        </li>
+        
+         <li>
+         <span class= "izquierda" style="width: 210px" >123423</span>
+         <span class= "izquierda" style=" width:210px">Business Intelligence</span>
+        <span class= "izquierda" style="width: 210px">Alfredo Alonso</span>
+        <span class= "izquierda" style="width: 210px">3.000&euro;</span>
+        </li>
+        
+         <li>
+         <span class= "izquierda" style="width: 210px" >223234</span>
+         <span class= "izquierda" style=" width:210px">Arquitectura</span>
+        <span class= "izquierda" style="width: 210px">Benedicto Garcilaso</span>
         <span class= "izquierda" style="width: 210px">23.000&euro;</span>
         </li>
         
          <li>
-         <span class= "izquierda" style="width: 210px" >2</span>
-         <span class= "izquierda" style=" width:210px">Negociaci&oacute;n</span>
-        <span class= "izquierda" style="width: 210px">juanete</span>
-        <span class= "izquierda" style="width: 210px">23.000&euro;</span>
-        </li>
-        
-         <li>
-         <span class= "izquierda" style="width: 210px" >2</span>
-         <span class= "izquierda" style=" width:210px">Negociaci&oacute;n</span>
-        <span class= "izquierda" style="width: 210px">juanete</span>
-        <span class= "izquierda" style="width: 210px">23.000&euro;</span>
-        </li>
-        
-         <li>
-         <span class= "izquierda" style="width: 210px" >2</span>
-         <span class= "izquierda" style=" width:210px">Negociaci&oacute;n</span>
-        <span class= "izquierda" style="width: 210px">juanete</span>
-        <span class= "izquierda" style="width: 210px">23.000&euro;</span>
+         <span class= "izquierda" style="width: 210px" >223567</span>
+         <span class= "izquierda" style=" width:210px">Planificaci&oacute;n</span>
+        <span class= "izquierda" style="width: 210px">Juan Domingo</span>
+        <span class= "izquierda" style="width: 210px">6.000&euro;</span>
         </li>
             
     </ul>
@@ -341,7 +399,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="#" class="gmail"> </a></li>
 						<li><a href="#" class="print"> </a></li>
 					</ul>
-				<p class="footer-copyrts">Â© 2015 Online School . Design  by OnlineSchool</a> </p>
+				<p class="footer-copyrts">Ã‚Â© 2015 Online School . Design  by OnlineSchool</a> </p>
 		</div>
 	  <div class="clearfix"> </div>
 		</div>
