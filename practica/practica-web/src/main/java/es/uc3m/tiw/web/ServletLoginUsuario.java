@@ -70,7 +70,7 @@ public class ServletLoginUsuario extends HttpServlet {
                     }
                 }else{
                 this.getServletConfig().getServletContext()
-                .getRequestDispatcher("/login.jsp").forward(request, response);
+                .getRequestDispatcher("/loginError.jsp").forward(request, response);
                 }
             }
         }

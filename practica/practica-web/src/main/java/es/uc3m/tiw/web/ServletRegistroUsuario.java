@@ -44,6 +44,15 @@ public class ServletRegistroUsuario extends HttpServlet {
         sesion =request.getSession();
        
         String accion = (request.getParameter("accion")==null) ? "" : (String)request.getParameter("accion");
+        
+        String dioreccionPasado = request.getParameter("direccion");
+        String telefonoPasado = request.getParameter("telefono");
+        String emailPasado = request.getParameter("email");
+        String passwordPasado = request.getParameter("password");
+        String nombrePasado = request.getParameter("nombre_Usuario");
+        String apellido1Pasado = request.getParameter("apellido1");
+        String apellido2Pasado = request.getParameter("apellido2");
+        
        
         if(accion.equals("registrar")){   
            
@@ -56,7 +65,7 @@ public class ServletRegistroUsuario extends HttpServlet {
             user.setApellido1(request.getParameter("apellido1"));
             user.setApellido2(request.getParameter("apellido2"));
            
-           
+            
             if (!user.ValidarNombreUsuario() ||
                      !user.validarApellido1() ||
                         !user.ValidarApellido2() ||
@@ -65,9 +74,9 @@ public class ServletRegistroUsuario extends HttpServlet {
                         !user.validarContrasenia()||
                         !user.validarSegundaContrasenia(request.getParameter("password2"))){
                
-            this.getServletConfig().getServletContext().getRequestDispatcher("/singu"
-                    + ""
-                    + "p.jsp").forward(request, response);
+            this.getServletConfig().getServletContext().getRequestDispatcher("/errorSingup.jsp").forward(request, response);
+			            
+            			
             } else {
             ServletContext context = request.getSession().getServletContext();
             context.setAttribute("Usuario", user);

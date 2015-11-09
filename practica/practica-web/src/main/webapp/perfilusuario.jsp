@@ -133,18 +133,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                   <li style="font-style:italic; margin-left: 70px">logro 2</li>
                                 </ul> 
                                 <p id="deseos">- Lista de deseos</p>
-                                <input style="display:none; margin-left:50px" class="editperfil" type="text"  id="deseo" placeholder="Deseo 1"><br>
-                                <input style="display:none; margin-top:5px; margin-left:50px" class="editperfil" type="text"  id="deseo2" placeholder="Deseo 2"><br>
-                                <input style="display:none; margin-top:5px; margin-left:50px" class="editperfil" type="text"  id="deseo3" placeholder="Deseo 3"><br>
-                                <input style="display:none; margin-top:5px; margin-left:50px" class="editperfil" type="text"  id="deseo4" placeholder="Deseo 4"><br>
-                                <input style="display:none; margin-top:5px; margin-left:50px" class="editperfil" type="text"  id="deseo5" placeholder="Deseo 5"><br>
-                                <input style="display:none; margin-top:5px; margin-left:50px" class="editperfil" type="text"  id="deseo6" placeholder="Deseo 6"><br>
-                                <input style="display:none; margin-top:5px; margin-left:50px" class="editperfil" type="text"  id="deseo7" placeholder="Deseo 7"><br>
-                                <input style="display:none; margin-top:5px; margin-left:50px" class="editperfil" type="text"  id="deseo8" placeholder="Deseo 8"><br>
-                                <input style="display:none; margin-top:5px; margin-left:50px" class="editperfil" type="text"  id="deseo9" placeholder="Deseo 9"><br>
-                                <input style="display:none; margin-top:5px; margin-left:50px" class="editperfil" type="text"  id="deseo10" placeholder="Deseo 10">
-                                <input style="display:none" type="image" id="save1" class="tic" alt="image" src="resources/images/save.png">
-                            </div>
+                                <% 
+                                if (!usuario.getDeseos().isEmpty()){
+                                for (int i = 0; i<usuario.getDeseos().size();i++){
+                                %><p><%= usuario.getDeseos().get(i).getNombreCurso()%></p><%
+                                	}		                             	
+                                }
+                                %>
+                                </div>
                         </div>
            
                     </div>

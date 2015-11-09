@@ -96,7 +96,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="col-md-8 courses">
                    
-                    <form action="ServletCurso" name="fcourse" method="get">
+                  
                         <ul class="list-courses">
                        
                         <%   
@@ -106,21 +106,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 %>
                                 <li class="list-courses-contain">
                                     <img src="resources/images/book.jpg">
-                                    <div>                           
-                                        <input type="hidden" name="curso" value="<%=cursos.getId()%>"></inut>   
-                                        <a name="dirigir">
+                                    <div>                        
+                                                                          
                                             <h4><%=cursos.getNombreCurso()%></h4>
-                                        </a>
+                                    
                                         <p>Profesor: <%=cursos.getProfesor() %><p>
-                                        <input type = "hidden" name = "accion" value = "dirigir">
-                                    </div>
+                                   </div>
+                                   <form action="servletCurso" method="post"  >  
+                                        	 <input type="hidden" name="pedro" value="<%=cursos.getId() %>"> 
+                               				 <input type="submit" name="desear" value="lodeseo"> 
+                                        	 <input type ="hidden" name ="accionar" value = "desear">  
+                              			    
+                                        </form>
                                 </li>
                                 <%
                         }
                          %>
                             </ul>
+                            
+                            
+                               
                            
-                            </form>
+                           
                    
                     </div>
                 <div class="clearfix"> </div>

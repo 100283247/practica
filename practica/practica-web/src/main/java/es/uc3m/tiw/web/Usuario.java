@@ -1,5 +1,7 @@
 package es.uc3m.tiw.web;
 
+import java.util.ArrayList;
+
 public abstract class Usuario {
 
 	//Definimos los atributos que va a tener un usuario.
@@ -13,6 +15,7 @@ public abstract class Usuario {
 	//tipo de usuario, en el sistema (Alumno, Profesor o Administrador)
 	private String rol;
 	private String direccion;
+	private ArrayList<Cursos> deseos;
 	
 	
 	//Constructor.
@@ -91,6 +94,19 @@ public abstract class Usuario {
 
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
+	}
+	
+
+
+
+	public ArrayList<Cursos> getDeseos() {
+		return deseos;
+	}
+
+
+
+	public void setDeseos(ArrayList<Cursos> curso) {
+		this.deseos = curso;
 	}
 
 
@@ -214,5 +230,7 @@ public abstract class Usuario {
 		password = "";
 		return false;
 	}
+
+
 	
 }
