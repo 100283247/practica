@@ -1,6 +1,5 @@
-
 .listaAdmin{
-	background:#fff;
+    background:#fff;
   font-family: 'Source Sans Pro', sans-serif;
       color: #fff;
       text-align: center;
@@ -10,7 +9,7 @@
     width: 100%;
 }
 .listaAdminTitul{
-    
+   
     color: #fff;
     position: absolute;
     margin-left: 76px;
@@ -20,11 +19,11 @@
     font-weight:400;
      height: 500px;
     width: 250px;
+  
    
-    
 }
 .listadoCosas{
-    
+   
     color: #918D8D;
     position: absolute;
     margin-left: 276px;
@@ -57,7 +56,7 @@
     border: #888888;
     border-bottom-style: double;
     border-style: solid;
-    
+   
 }
 .tabAdmin{
     margin-top: 2px;
@@ -72,10 +71,10 @@
   list-style: none;
   float: left;
   width: 99%;
-  
+ 
 }
 .tabAdmin:hover{
-    color: #a89574; 
+    color: #a89574;
 }
 .izquierda { float: left;
     font-family: 'SintonyRegular';
@@ -86,16 +85,14 @@ margin-top: 10px;}
 }
 
 .validadoDenegado{
-	font-family: 'SintonyRegular';
-	margin-left: 580px;
-	width: 300px;
-	height: 80px;
-	text-align: center;
-	background-color: white;
-	top: 50px;
-	font-size:25px;
-	position: absolute;
-	display: none;
-
-	
+    font-family: 'SintonyRegular';
+    margin-left: 580px;
+    width: 300px;
+    height: 80px;
+    text-align: center;
+    background-color: white;
+    top: 50px;
+    font-size:25px;
+    position: absolute;
+    display: none;
 }
